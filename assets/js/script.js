@@ -80,6 +80,33 @@ for (let i = 0; i < formInputs.length; i++) {
       }
    });
 }
+form.addEventListener("submit", async function (e) {
+   e.preventDefault(); // stop page redirect
+
+   const data = new FormData(form);
+
+   const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+         Accept: "application/json",
+      },
+   });
+
+   const status = document.querySelector(".form-status");
+
+   if (response.ok) {
+      status.textContent =
+         "✔ Message sent successfully! I'll get back to you soon.";
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+      setTimeout(() => {
+         status.textContent = "";
+      }, 4000);
+   } else {
+      status.textContent = "❌ Oops! Something went wrong.";
+   }
+});
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
