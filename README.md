@@ -8,7 +8,7 @@ This portfolio showcases my frontend development skills, projects, and professio
 ## 🚀 Live Website
 
 🔗 **Portfolio:**  
-https://afsal-palliyal.github.io/portfolio (update after deployment)
+https://afsal-dev.vercel.app/
 
 ---
 
@@ -35,7 +35,7 @@ Currently working at **Stratagile Private Limited**, where I convert complex UI 
 ### Frameworks / Libraries
 
 - Bootstrap
-- React.js _(Learning)_
+- React.js
 - Slick Slider
 
 ### Tools
@@ -106,9 +106,3 @@ https://github.com/Afsal-Palliyal
 
 **Email**  
 palliyalafsal@gmail.com
-
----
-
-## 📄 License
-
-This project is open-source and available under the **MIT License**.
