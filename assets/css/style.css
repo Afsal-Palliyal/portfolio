@@ -1041,6 +1041,9 @@ textarea.form-input::-webkit-resizer {
    width: fit-content;
    animation: fadeIn 0.3s ease;
 }
+.form-status:empty {
+   display: none;
+}
 
 @keyframes fadeIn {
    from {
