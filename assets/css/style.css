@@ -112,7 +112,18 @@ html {
    font-family: var(--ff-poppins);
 }
 body {
-   background: var(--smoky-black);
+   background:
+      radial-gradient(
+         circle at 15% 20%,
+         rgba(255, 193, 7, 0.08),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 85% 70%,
+         rgba(255, 193, 7, 0.05),
+         transparent 45%
+      ),
+      var(--smoky-black);
 }
 .sidebar,
 article {
@@ -201,10 +212,21 @@ article.active {
    position: absolute;
    bottom: 0;
    left: 0;
-   width: 30px;
-   height: 3px;
-   background: var(--text-gradient-yellow);
-   border-radius: 3px;
+   width: 40px;
+   height: 4px;
+   border-radius: 4px;
+   background: linear-gradient(90deg, #ffd54a, #ff9f1a, #ffd54a);
+   background-size: 200% 100%;
+   animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+   0% {
+      background-position: 200% 0;
+   }
+   100% {
+      background-position: -200% 0;
+   }
 }
 .has-scrollbar::-webkit-scrollbar {
    width: 5px;
@@ -833,11 +855,23 @@ main {
 .project-list {
    display: grid;
    grid-template-columns: 1fr;
-   gap: 30px;
+   gap: 32px;
    margin-bottom: 10px;
 }
 .project-item {
    display: none;
+   border-radius: 18px;
+   overflow: hidden;
+   transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+   padding-bottom: 8px;
+}
+.project-item:hover {
+   transform: translateY(-8px) scale(1.02);
+   box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.45),
+      0 0 40px rgba(255, 193, 7, 0.05);
 }
 .project-item.active {
    display: block;
