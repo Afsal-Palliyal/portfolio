@@ -1480,8 +1480,8 @@ textarea.form-input::-webkit-resizer {
       gap: 25px;
    }
    .main-content {
-      min-width: 75%;
-      width: 75%;
+      min-width: 73%;
+      width: 73%;
       margin: 0;
    }
    .sidebar {
